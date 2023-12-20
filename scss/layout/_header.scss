@@ -4,13 +4,13 @@
     margin-bottom: 80px;
     padding-bottom: 2em;
     background-color: base.$clr-pale-cyan;
-    background-image: url('../../images/bg-hero-mobile.svg');
+    background-image: url('../images/bg-hero-mobile.svg');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: 100%;
 
     @include base.media-query(large){
-        background-image: url('../../images/bg-hero-desktop.svg');
+        background-image: url('../images/bg-hero-desktop.svg');
         background-size: 80%;
     }
 }

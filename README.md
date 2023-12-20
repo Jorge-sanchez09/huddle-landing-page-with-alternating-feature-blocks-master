@@ -44,8 +44,8 @@ Users should be able to:
 
 
 ### What I learned
--This is the first challenge in which I make an entire page, not just a single component like most of the frontend mentor challenges
--I wanted to try a different approach to organize my css by diving my style code on scss partials, since I think it's something very common between developers, though I'm far from sure if the way I did was acceptable 😓
+- Since the page content is wrapped with a same width I made a container with a max-width, and for the header and footer I first apply the background and then put the wrapper container 
+- The only thing I'm unsure about its my scss organization. I wanted to try a different approach to organize my css by diving my style code on scss partials since I think it's something very common, though I'm far from sure if the way I did was acceptable 😓
 
 To see how you can add code snippets, see below:
 
