@@ -45,9 +45,8 @@ Users should be able to:
 
 ### What I learned
 - Since the page content is wrapped with a same width I made a container with a max-width, and for the header and footer I first apply the background and then put the wrapper container 
-- The only thing I'm unsure about its my scss organization. I wanted to try a different approach to organize my css by diving my style code on scss partials since I think it's something very common, though I'm far from sure if the way I did was acceptable 😓
-
-To see how you can add code snippets, see below:
+- One thing I'm unsure about is my scss organization. I wanted to try a different approach organizing my css by diving my style code on scss partials since I think it's something very common, though I'm far from sure if the way I did was acceptable 😓
+- The other thing I wish to know more about is the description of the images, since the challenge uses a lot of images and icons, I don't really know if it's necesary to add an alt attribute with a good derscription or leaving it empty for some of the images, specially for the icons that are being added with a <i> tag
 
 
 ## Author
