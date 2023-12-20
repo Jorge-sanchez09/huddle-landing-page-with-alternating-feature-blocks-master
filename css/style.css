@@ -67,14 +67,14 @@ h1, h2 {
   margin-bottom: 80px;
   padding-bottom: 2em;
   background-color: hsl(193, 100%, 96%);
-  background-image: url("../../images/bg-hero-mobile.svg");
+  background-image: url("../images/bg-hero-mobile.svg");
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: 100%;
 }
 @media (min-width: 1000px) {
   .background {
-    background-image: url("../../images/bg-hero-desktop.svg");
+    background-image: url("../images/bg-hero-desktop.svg");
     background-size: 80%;
   }
 }
