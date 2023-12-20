@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  color: hsl(192, 100%, 9%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1, h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0px 0px 10px 1px rgb(219, 219, 219);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.btn:is(:hover, :focus) {
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 200ms ease-out;
+}
+
+.btn--primary {
+  padding: 1em 2em;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(322, 100%, 66%);
+}
+
+.background {
+  margin-bottom: 80px;
+  padding-bottom: 2em;
+  background-color: hsl(193, 100%, 96%);
+  background-image: url("../../images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 100%;
+}
+@media (min-width: 1000px) {
+  .background {
+    background-image: url("../../images/bg-hero-desktop.svg");
+    background-size: 80%;
+  }
+}
+
+header {
+  display: grid;
+  gap: 50px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+header nav img {
+  max-width: 150px;
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  gap: 3.5em;
+  text-wrap: balance;
+}
+.hero__text {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .hero__text {
+    text-align: left;
+    justify-items: start;
+  }
+}
+.hero__text p {
+  line-height: 1.5;
+}
+@media (min-width: 800px) {
+  .hero {
+    grid-template-columns: 3fr 4fr;
+    gap: 2.5em;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.services {
+  display: grid;
+  justify-items: center;
+  gap: 1.75em;
+}
+.services > * {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  text-wrap: balance;
+  padding: 2em;
+  border-radius: 0.75em;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 0px 10px 0px rgb(219, 219, 219);
+}
+.services .service {
+  gap: 50px;
+}
+.services .service__content {
+  display: grid;
+  gap: 0.75em;
+}
+.services .service__text {
+  line-height: 1.5;
+  color: hsl(208, 11%, 55%);
+}
+@media (min-width: 800px) {
+  .services .service {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+  }
+  .services .service:nth-child(odd) .service__content {
+    order: -1;
+  }
+}
+@media (min-width: 1000px) {
+  .services .service {
+    padding: 3em;
+  }
+  .services .service img {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+.services .started {
+  transform: translateY(40%);
+  gap: 1.5em;
+  padding: 2.5em 1.5em;
+  width: min(100%, 800px);
+}
+
+footer {
+  padding-block: 100px 50px;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 100%);
+  background: hsl(192, 100%, 9%);
+}
+footer img {
+  filter: brightness(0) invert(1);
+}
+
+.company {
+  display: grid;
+  gap: 2em;
+  margin-block: 2em;
+}
+.company__contact {
+  display: grid;
+  gap: 1.3em;
+}
+.company__contact div {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  text-wrap: balance;
+}
+.company__contact div img {
+  margin-top: 5px;
+}
+.company__links div {
+  display: grid;
+  justify-items: start;
+}
+.company__links a {
+  padding-block: 0.5em;
+}
+.company__links a:is(:hover, :focus) {
+  outline: none;
+  text-decoration: underline;
+}
+@media (min-width: 1000px) {
+  .company__links {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.company__social {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+.company__social a {
+  display: grid;
+  place-items: center;
+  width: 2.25em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+}
+.company__social a:is(:hover, :focus) {
+  outline: none;
+  color: hsl(322, 100%, 66%);
+}
+.company__copyright {
+  text-align: center;
+  font-size: 0.8rem;
+}
+@media (min-width: 1000px) {
+  .company__copyright {
+    text-align: right;
+  }
+}
+@media (min-width: 1000px) {
+  .company {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

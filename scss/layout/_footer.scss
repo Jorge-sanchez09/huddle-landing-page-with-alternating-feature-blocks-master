@@ -1,0 +1,92 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as m;
+
+footer{
+    padding-block: 100px 50px;
+    font-size: 0.9rem;
+    color: var.$clr-white;
+    background: var.$clr-dark-cyan;
+
+    img{
+        filter: brightness(0) invert(1);
+    }
+}
+
+.company{
+    display: grid;
+    gap: 2em;
+    margin-block: 2em;
+
+    &__contact{
+        display: grid;
+        gap: 1.3em;  
+
+        div{
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            text-wrap: balance;
+
+            img{
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__links{
+
+        div{
+            display: grid;
+            justify-items: start;
+        }
+
+        a{
+            padding-block: 0.5em;
+
+            &:is(:hover, :focus){
+                outline: none;
+                text-decoration: underline;
+            }
+        }
+
+        @include m.media-query(large){
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__social{
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+
+        a{
+            display: grid;
+            place-items: center;
+            width: 2.25em;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 2px solid currentColor;
+            
+            &:is(:hover, :focus){
+                outline: none;
+                color: var.$clr-primary;
+            }
+        }
+    }
+
+    &__copyright{
+        text-align: center;
+        font-size: 0.8rem;
+
+        @include m.media-query(large){
+            text-align: right;
+        }
+    }
+
+    @include m.media-query(large){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+    }
+}

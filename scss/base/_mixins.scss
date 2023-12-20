@@ -1,0 +1,8 @@
+@use 'variables' as var;
+@use 'sass:map';
+
+@mixin media-query($key){
+    @media (min-width: map.get(var.$breakpoints, $key)){
+        @content;
+    }
+}

@@ -1,0 +1,60 @@
+@use '../base/variables' as var;
+@use '../base/mixins' as m;
+
+.services{
+    display: grid;
+    justify-items: center;
+    gap: 1.75em;
+
+    & > *{
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        text-wrap: balance;
+        padding: 2em;
+        border-radius: 0.75em;
+        background-color: var.$clr-white;
+        box-shadow: 0px 0px 10px 0px rgb(219, 219, 219);
+    }
+
+    .service{
+        gap: 50px;
+
+        &__content{
+            display: grid;
+            gap: 0.75em;
+        }
+
+        &__text{
+            line-height: 1.5;
+            color: var.$clr-grayish-blue;
+        }
+
+
+        @include m.media-query(medium){
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            text-align: left;
+
+            &:nth-child(odd) .service__content{
+                order: -1;
+            }
+        }
+
+        @include m.media-query(large){
+            padding: 3em;
+
+            img{
+                width: 100%;
+                max-width: 80%;
+            }
+        }
+    }
+
+    .started{    
+        transform: translateY(40%);
+        gap: 1.5em;
+        padding: 2.5em 1.5em;
+        width: min(100%, 800px);
+    }
+}
