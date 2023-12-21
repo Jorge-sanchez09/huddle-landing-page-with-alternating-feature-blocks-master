@@ -43,7 +43,7 @@ h1, h2 {
 }
 
 .btn {
-  padding: 0.5em 1em;
+  padding: 0.6em 1em;
   border-radius: 2em;
   font-weight: 700;
   text-align: center;
@@ -65,32 +65,39 @@ h1, h2 {
 
 .background {
   margin-bottom: 80px;
-  padding-bottom: 2em;
+  padding-block: 1em 2em;
   background-color: hsl(193, 100%, 96%);
   background-image: url("../images/bg-hero-mobile.svg");
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 100%;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+@media (min-width: 800px) {
+  .background {
+    background-image: url("../images/bg-hero-desktop.svg");
+  }
 }
 @media (min-width: 1000px) {
   .background {
-    background-image: url("../images/bg-hero-desktop.svg");
-    background-size: 80%;
+    margin-bottom: 150px;
+    padding-block: 2em;
   }
 }
 
 header {
   display: grid;
-  gap: 50px;
+  gap: 75px;
 }
 header nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% minmax(max-content, 200px);
+  gap: 1em;
   align-items: center;
-  gap: 5px;
+  justify-content: space-between;
 }
-header nav img {
-  max-width: 150px;
+header nav .btn {
+  width: 100%;
+  margin-left: auto;
 }
 
 @media (min-width: 1000px) {
@@ -184,7 +191,7 @@ header nav img {
 }
 
 footer {
-  padding-block: 100px 50px;
+  padding-block: 150px 50px;
   font-size: 0.9rem;
   color: hsl(0, 0%, 100%);
   background: hsl(192, 100%, 9%);
@@ -195,7 +202,8 @@ footer img {
 
 .company {
   display: grid;
-  gap: 2em;
+  justify-items: start;
+  gap: 2.5em;
   margin-block: 2em;
 }
 .company__contact {
@@ -223,6 +231,7 @@ footer img {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: column;
+    justify-self: stretch;
     justify-content: space-around;
   }
 }

@@ -2,31 +2,37 @@
 
 .background{
     margin-bottom: 80px;
-    padding-bottom: 2em;
+    padding-block: 1em 2em;
     background-color: base.$clr-pale-cyan;
     background-image: url('../images/bg-hero-mobile.svg');
     background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: 100%;
+    background-position: 0 0;
+    background-size: 100% 100%;
+
+    @include base.media-query(medium){
+        background-image: url('../images/bg-hero-desktop.svg');
+    }
 
     @include base.media-query(large){
-        background-image: url('../images/bg-hero-desktop.svg');
-        background-size: 80%;
+        margin-bottom: 150px;
+        padding-block: 2em;
     }
 }
 
 header{
     display: grid;
-    gap: 50px;
+    gap: 75px;
 
     nav{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 50% minmax(max-content, 200px);
+        gap: 1em;
         align-items: center;
-        gap: 5px;
-        
-        img{
-            max-width: 150px;
+        justify-content: space-between;
+
+        .btn{
+            width: 100%;
+            margin-left: auto;
         }
     }
 }
